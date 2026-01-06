@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why this site exists"
-date: 2026-01-07
+date: 2026-01-06
 ---
 
 This site is intentionally simple.

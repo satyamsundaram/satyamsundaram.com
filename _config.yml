@@ -3,4 +3,4 @@ description: Personal site & blog
 url: http://satyamsundaram.com
 
 markdown: kramdown
-theme: minima
+# theme: minima

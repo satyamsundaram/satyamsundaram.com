@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>{{ page.title }} · {{ site.title }}</title>
-  </head>
-  <body>
-    <nav>
-      <a href="/">Home</a> |
-      <a href="/blog">Blog</a> |
-      <a href="/about">About</a>
-    </nav>
 
-    <main>
-      {{ content }}
-    </main>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>{{ page.title }} · {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+  <nav>
+    <a href="/">Home</a> |
+    <a href="/blog">Blog</a> |
+    <a href="/about">About</a>
+  </nav>
+
+  <main>
+    {{ content }}
+  </main>
+</body>
+
 </html>

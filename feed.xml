@@ -4,18 +4,18 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>{{ site.title }}</title>
+    <title>{{ site.title | xml_escape }}</title>
     <link>{{ site.url }}</link>
-    <description>{{ site.description }}</description>
+    <description>{{ site.description | xml_escape }}</description>
     <language>en-us</language>
 
     {% for post in site.posts %}
     <item>
-      <title>{{ post.title }}</title>
+      <title>{{ post.title | xml_escape }}</title>
       <link>{{ site.url }}{{ post.url }}</link>
       <guid>{{ site.url }}{{ post.url }}</guid>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-      <description>{{ post.content | strip_html | truncate: 200 }}</description>
+      <description>{{ post.content | strip_html | truncate: 200 | xml_escape }}</description>
     </item>
     {% endfor %}
 

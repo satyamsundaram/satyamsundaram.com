@@ -3,12 +3,10 @@ layout: default
 title: Projects
 ---
 
-## Selected Projects
-
-**Project Name**
+**Project 1**
   
 Short description of what you built, why it matters, and what you learned.
 
-**Another Project**
+**Project 2**
 
 Brief explanation. Link to GitHub or write-up if relevant.

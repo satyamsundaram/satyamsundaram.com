@@ -17,7 +17,7 @@ Interests: computers, web, engineering, startups, philosophy, economy, history, 
 
 ---
 
-**Education**:
+**Education**
 
 Bachelor of Technology, Computer Science: Indian Institute of Engineering Science and Technology, Shibpur
 

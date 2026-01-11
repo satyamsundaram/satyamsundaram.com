@@ -83,3 +83,10 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.post-meta {
+    font-size: 14px;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}

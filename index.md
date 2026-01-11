@@ -3,9 +3,8 @@ layout: default
 title: Home
 ---
 
-I’m Satyam Sundaram.
+Hi, I’m Satyam Sundaram.
 
-I work on systems, reliability, and engineering.  
-This site is a long-term log of thinking, building, and learning.
+I'm a Site Reliability Engineer by profession but I also love building products that people love. I like to dig deep and think from first principles when approaching any problem that's new and interesting.
 
-You can find my writing, projects, and notes here.
+This site is a long-term log of my thinking, learning and building. Across tech, economy, culture and life. 

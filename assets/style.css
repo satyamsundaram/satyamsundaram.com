@@ -90,3 +90,15 @@ a:hover {
     margin-top: -10px;
     margin-bottom: 30px;
 }
+
+.socials a {
+    color: #555;
+    margin-right: 14px;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.socials a:hover {
+    color: #111;
+}

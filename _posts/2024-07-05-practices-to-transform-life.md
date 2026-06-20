@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Practices To Transform Life"
+date: 2024-07-05
+---
+
+All of us want to *accomplish things* in our life. We want to be *respected* in our work, be *happy* in our life and continue to *grow* for as long as we can. **Our intentions in all of these scenarios are often always great but it’s our actions that mostly let us down**. And, our actions are determined by our beliefs and practices. So, in order to create a better life, we must have strong beliefs and practices that help us act better.
+
+Over the past year, I’ve acquired new perspectives and ideologies to help me lead a better life. I’ve put these new methods into practice and I’d say they have helped me become more focused, at peace with myself and excited for life. These are:
+
+(1) **Growth mindset:** Previously, I often thought that maybe I wasn’t good enough because I wasn’t as talented as my peers. I was unable to see the hard work that they had put behind their success and avoided doing things that were necessary by thinking that maybe this was not my calling. But all that changed when I read about the [Growth Mindset by Carol Dweck](https://www.amazon.com/Mindset-Psychology-Carol-S-Dweck/dp/0345472322/ref=sr_1_3?crid=2KU2YKZP0M8VD&dchild=1&keywords=growth+mindset&qid=1631421105&sprefix=growth+m%2Caps%2C451&sr=8-3).
+
+It made me realize that what I had was a fixed mindset and that in order to grow and change my life, I needed to have a growth mindset. A mindset which believes that **“I can do anything I want in life. All I need to do is to learn, act and give it some time”**. It’s only up to me to decide whether doing this will be beneficial or not and then I can do it. It seeks to expand its expertise and learn forever. It asks what is it that I do not know and then goes and does it. It is a *child’s curiosity mixed with an explorer’s determination.* It opens the gate to all the new possibilities of things that you can do and be.
+
+**No skill issue that you have is hard-coded into you**. It’s only a matter of making a decision to conquer it, focus and give it the needed time and effort. There is no reason you wouldn’t grow. You are not limited by anything. Every great thing that there is today, every great person that ever existed was no different from you when they were nothing. Only that they decided and acted on their vision.
+
+(2) **Atomic habits:** The life that you’re leading right now is the result of your daily routine and habits. Your habits can make you great or make you worse off, depending on which side of the spectrum they lie. Previously, when I wanted to break an old habit or create a new one, I always failed because I was eager to see results quickly. I set my habits abruptly and in a high magnitude right from the first day. Here’s what I mean: For example, if I wanted to start exercising from tomorrow, I set a huge goal of doing 30 minutes of exercises when I should have just started with 10. I was over-estimating from myself and I always let myself down. Or, for example, if I wanted to break an old habit such as to quit binge watching YouTube videos for hours, I immediately uninstalled YouTube and declared to myself that I would not watch YouTube anymore, but after a few days I always found myself back to doing the same thing.
+
+What I mean by all of this is that everything starts small. Even if you set overtly ambitious goals for yourself right from the start, don’t start acting on it immediately. Break it down into different levels of difficulty depending on where you are today and increase your level gradually. Rome wasn’t built in a day. Every product is built feature by feature. So, start small, be consistent, be patient, be understanding and increase the load on yourself incrementally.
+
+(3) **Deliberate practice:** There are three zones of learning: comfort zone, growth zone and panic zone. The **comfort zone** is where we do the things we already know. This automates our processes but we are not learning anything new. We are not growing.
+
+The **panic zone** is where things are extremely beyond our expertise and when doing those things seem incomprehensible given our capabilities. This gives us a lot of stress and decreases our confidence.
+
+The **growth zone** is the zone that is **just** outside our comfort zone (our expertise), where we learn things we do not know or suck at, and this eventually stretches the area of our comfort zone. We do not go completely into unknown territory but we go to grounds where we know some stuff and don’t know some similar stuff. It’s a familiar, yet new space.
+
+For example, if I am new to driving, I will first try my hands at low traffic areas before jumping on the highway (growth zone). If I go to the highway, immediately, I may make serious mistakes and disrupt my confidence and the will to make any progress (panic zone). If I keep learning to drive in the parking lot, even if I’ve mastered it, I will not grow (comfort zone).
+
+In the same way, you can visualize and break down any situation you are in, into these 3 zones and act gradually towards each one of them. This requires a constant feedback loop that continuously tells us where we need to improve and by what metrics. Without making note of our mistakes and learning from them, we will never make any progress. So, deliberate practice is when you deliberately step just outside your comfort zone, learn from your mistakes and keep doing this as you keep growing.
+
+(4) **Feynman technique:** To truly master anything deeply, learn all its concepts, and go deep until you reach its first principles and then build it from the ground up. **Write what you learned and try to find gaps in your learning, then go and fill them again.** Do this repeatedly until what you learned is so clear and concise that you can explain it to a 5-year-old easily. Then talk about it with others to gain new perspectives and insights. That’s how you learn something deeply and well enough such that you don’t end up just knowing the name of something but you actually know it in depth. Armed with this knowledge, you can reconstruct what you know, break it and use it anywhere and in anyway you desire.
+
+(5) **You (today) vs You (yesterday):** Comparison is the thief of joy. But, this is only true when you are comparing yourself with others. In the grand scale, there is no sound reasoning to compare yourself with others, not because none of this matters, but because we are all different beings. Sure, we all desire the same things: wealth, health and fun in life but the paths we have to take to achieve these are completely different from one another that it is foolish to compare your journey with others.
+
+**All of us start from different places and situations in life, we go through different environments, we each have different resources and different destinations. No two people on this planet, have all of their goals similar to the other.** There are some overlaps, but many differences, especially in the degree to which one wants something versus the other. We can take inspiration and learn from the mistakes of others but comparing with others and grieving about your lacking is not going to change your life.
+
+The only thing that will change your life and give you what you desire is taking action. One way to ensure this is to compare yourself, with who you were yesterday and aspire to become better than him/her today. This is the only way to achieve all that you want. Period.
+
+In summary, if you want to transform your life today, remember and act on these 5 principles:
+
+1. **Growth mindset:** You can do anything you set your mind to; there are no limitations.
+2. **Atomic habits:** A journey of a thousand miles begins with a single step. We are what we repeatedly do. Start small & slow with better habits but be consistent and gradually level up.
+3. **Deliberate practice:** Keep fighting on the edges of your comfort zone and it will keep expanding.
+4. **Feynman technique:** Don’t just know the name of something, know it truly and deeply.
+5. **You vs You:** Everybody else is on a different journey. You are your only competition.
+

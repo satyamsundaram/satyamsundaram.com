@@ -3,9 +3,15 @@ layout: default
 title: Projects
 ---
 
-{% for project in site.projects %}
+{% assign projects = site.projects | sort: 'year' | reverse %}
+{% for project in projects %}
 <p>
-  <strong><a href="{{ project.link }}">{{ project.title }}</a></strong> ({{ project.year }})
+  <strong><a href="{{ project.url }}">{{ project.title }}</a></strong> ({{ project.year }})
+  {% if project.link %}
+  · <a href="{{ project.link }}">visit →</a>
+  {% endif %}
 </p>
-{{ project.content }}
+{% if project.excerpt %}
+<p>{{ project.excerpt }}</p>
+{% endif %}
 {% endfor %}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>ES6 vs CommonJS modules explained · Satyam Sundaram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+
+<body>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+  </button>
+
+  <header>
+    <h1 class="site-title">
+      <a href="/">Satyam Sundaram</a>
+    </h1>
+
+    <nav>
+      <a href="/blog">Blog</a>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/feed.xml">RSS</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+    <h1>ES6 vs CommonJS modules explained</h1>
+    <p class="post-meta">
+        December 17, 2025
+    </p>
+
+    <p>For starters, let us understand what ES6 and CommonJS are, as well as their history.</p>
+
+<ul>
+  <li>
+    <p>ES6 stands for ECMAScript 6. ECMAScript was created to standardize JavaScript.</p>
+  </li>
+  <li>
+    <p>CommonJS is a project with the goal to establish conventions on the module ecosystem for <strong>JavaScript outside of the web browser</strong>. CommonJS’s module specification is widely used today, in particular for server-side JavaScript programming with <strong>Node.js</strong>. It is also used in the development of browser-side JavaScript, but the code must be packaged with a transpiler since browsers don’t support CommonJS.</p>
+  </li>
+</ul>
+
+<p>CommonJS started in 2009 and ES1 was released in 1997.</p>
+
+<h3 id="how-to-distinguish-between-them">How to distinguish between them?</h3>
+
+<ul>
+  <li>
+    <p>CommonJS can be recognized by the use of the <code class="language-plaintext highlighter-rouge">require()</code> function and <code class="language-plaintext highlighter-rouge">module.exports</code>.</p>
+  </li>
+  <li>
+    <p>ES modules use <code class="language-plaintext highlighter-rouge">import</code> and <code class="language-plaintext highlighter-rouge">export</code> (or <code class="language-plaintext highlighter-rouge">export default</code>) statements for similar (though not identical) functionality.</p>
+  </li>
+</ul>
+
+<h3 id="what-is-a-module">What is a module?</h3>
+
+<p>A module is a Javascript file, i.e., each file in Javascript is treated as an independent, isolated module. It is only when we export it, that it is no longer isolated.</p>
+
+<p>However, unlike a normal Javascript file, a module can specify which variables and functions can be accessed outside the module. Other sections of the module cannot be accessed. A module can also load other modules.</p>
+
+<p>We use modules to reduce the number of lines of code in one file, make our code modular and isolate our code in order to prevent overwriting it (which can happen when we have a lot of global variables and code all in the same file).</p>
+
+<h3 id="how-to-use-the-commonjs-module-system-which-is-the-default-in-nodejs">How to use the CommonJS module system (which is the default) in Node.js?</h3>
+
+<h4 id="export">Export:</h4>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// to export a package from some module, say foo.js</span>
+<span class="kd">const</span> <span class="nx">function1</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{};</span>
+
+<span class="kd">const</span> <span class="nx">function2</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span><span class="nx">function1</span><span class="p">,</span> <span class="nx">function2</span><span class="p">};</span>
+
+<span class="cm">/******** another way to export ********/</span>
+<span class="c1">// or we add our function to exports as we declare it</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">function3</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{};</span>
+</code></pre></div></div>
+
+<h4 id="import">Import:</h4>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// to import foo.js in some other file, say index.js</span>
+<span class="kd">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./foo.js</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// relative path given foo.js and index.js are in the same folder</span>
+
+<span class="c1">// for a package after installing it</span>
+<span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">);</span> <span class="c1">// given the package supports CommonJS system</span>
+
+<span class="c1">// to use the functions inside foo.js</span>
+<span class="nx">foo</span><span class="p">.</span><span class="nf">function1</span><span class="p">();</span>
+<span class="nx">foo</span><span class="p">.</span><span class="nf">function2</span><span class="p">();</span>
+<span class="nx">foo</span><span class="p">.</span><span class="nf">function3</span><span class="p">();</span>
+
+<span class="cm">/******** another way to import ********/</span>
+<span class="kd">const</span> <span class="p">{</span><span class="nx">function1</span><span class="p">,</span> <span class="nx">function2</span><span class="p">,</span> <span class="nx">function3</span><span class="p">}</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">./foo.js</span><span class="dl">"</span><span class="p">);</span> <span class="c1">// using destructuring</span>
+
+<span class="c1">// now we can use them directly</span>
+<span class="nf">function1</span><span class="p">();</span>
+<span class="nf">function2</span><span class="p">();</span>
+<span class="nf">function3</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h3 id="how-to-use-the-es6-module-system-in-nodejs">How to use the ES6 module system in Node.js?</h3>
+
+<p>To use the ES6 module system in Node.js, we have to add an additional key-value in our package.json which is <code class="language-plaintext highlighter-rouge">"type": "module"</code>. By, this we specify Node.js to treat all .js files as modules. Any JS file importing other modules becomes the “top-level module” for the imported modules.</p>
+
+<h4 id="export-1">Export:</h4>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// to export a package from some module, say foo.js</span>
+<span class="kd">const</span> <span class="nx">function1</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{};</span>
+
+<span class="kd">const</span> <span class="nx">function2</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span><span class="nx">function1</span><span class="p">,</span> <span class="nx">function2</span><span class="p">};</span>
+
+<span class="cm">/******** another way to export ********/</span>
+<span class="c1">// or we export them as we declare it</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">function3</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{};</span>
+</code></pre></div></div>
+
+<h4 id="import-1">Import:</h4>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// to import foo.js in some other file, say index.js</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">function1</span><span class="p">,</span> <span class="nx">function2</span><span class="p">,</span> <span class="nx">function3</span><span class="p">}</span> <span class="o">=</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./foo.js</span><span class="dl">"</span><span class="p">;</span> <span class="c1">// relative path again</span>
+
+<span class="c1">// for a package after installing it</span>
+<span class="k">import</span> <span class="nx">chalk</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">chalk</span><span class="dl">"</span><span class="p">;</span> <span class="c1">// given the package supports ES6 system</span>
+
+<span class="c1">// now we can use them</span>
+<span class="nf">function1</span><span class="p">();</span>
+<span class="nf">function2</span><span class="p">();</span>
+<span class="nf">function3</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h3 id="es6-vs-commonjs-and-why-es6-is-better">ES6 vs CommonJS (and why ES6 is better?)</h3>
+
+<h4 id="require-in-commonjs-vs-import-in-es6">require() in CommonJS vs import in ES6</h4>
+
+<p>require is a function, hence it can be called anywhere in our code, even inside a code block (like an if statement or a for loop) but the same can’t be done with import. We always have to import at the top aka root level of our code.</p>
+
+<ul>
+  <li>
+    <p>As we see above, require is just a function, hence it is called at runtime where import is static and checked at parse time rather than runtime. ES6 modules are pre-parsed in order to resolve further imports before the code is executed. CommonJS modules-load dependencies on demand while executing the code. Thus, we’ll get all our errors beforehand in parse time (which is the case for import) and not in runtime (which is the case for require).</p>
+  </li>
+  <li>
+    <p>There are also certain helpful tools for static analysing which greatly benefit in writing error-free code. These tools can be used with import but not with require.</p>
+  </li>
+  <li>
+    <p>all our imports are hoisted which means that no matter where we put them, they will always be parsed and moved to the top.</p>
+  </li>
+  <li>
+    <p>all exports from ES6 are static which means we really know what modules we are importing.</p>
+  </li>
+</ul>
+
+<h3 id="so-why-are-commonjs-modules-still-around-in-node-if-es6-modules-are-better">So, why are CommonJS modules still around in Node if ES6 modules are better?</h3>
+
+<p>Because it is super difficult to get rid of the huge codebase in CommonJS all at once that has been supporting modules in Node for all these years. So, we have two first-class module systems in Node and having both CJS and ESM supported means there will be a fragmented community if the authors of packages decide to exclude one part of it by shipping a non-dual ESM package.</p>
+
+<p><a href="https://github.com/nodejs/node/issues/33954#issuecomment-776878379">The solution to that fragmentation is community pressure on those authors, and/or abandoning those authors.</a></p>
+
+<h3 id="references">References:</h3>
+
+<ol>
+  <li>
+    <p><a href="https://youtu.be/mK54Cn4ceac">Monsterlessons Academy</a></p>
+  </li>
+  <li>
+    <p><a href="https://usefulangle.com/post/252/script-type-module">usefulAngle.com</a></p>
+  </li>
+</ol>
+
+</article>
+
+  </main>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      btn.addEventListener('click', function () {
+        var root = document.documentElement;
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+
+        var rect = btn.getBoundingClientRect();
+        var x = rect.left + rect.width / 2;
+        var y = rect.top + rect.height / 2;
+        var r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+        root.style.setProperty('--vt-x', x + 'px');
+        root.style.setProperty('--vt-y', y + 'px');
+        root.style.setProperty('--vt-r', r + 'px');
+
+        var apply = function () {
+          root.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+        };
+
+        if (document.startViewTransition) {
+          document.startViewTransition(apply);
+        } else {
+          apply();
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Satyam Sundaram</title>
+    <link>https://satyamsundaram.com</link>
+    <description>Personal site &amp; long-term knowledge base</description>
+    <language>en-us</language>
+
+    
+    <item>
+      <title>My experience with the Gemini Xprize Hackathon</title>
+      <link>https://satyamsundaram.com/2026/06/17/gemini-xprize-hackathon.html</link>
+      <guid>https://satyamsundaram.com/2026/06/17/gemini-xprize-hackathon.html</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 +0530</pubDate>
+      <description>I came across this hackathon a few days ago while I was lurking on Devpost for a hackathon to participate in. Above all, I wanted something to actually complete and make a real submission (even if ...</description>
+    </item>
+    
+    <item>
+      <title>ES6 vs CommonJS modules explained</title>
+      <link>https://satyamsundaram.com/2025/12/17/es6-vs-commonjs.html</link>
+      <guid>https://satyamsundaram.com/2025/12/17/es6-vs-commonjs.html</guid>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 +0530</pubDate>
+      <description>For starters, let us understand what ES6 and CommonJS are, as well as their history.
+
+
+  
+    ES6 stands for ECMAScript 6. ECMAScript was created to standardize JavaScript.
+  
+  
+    CommonJS is a ...</description>
+    </item>
+    
+    <item>
+      <title>Why use left+(right-left)/2 instead of (left+right)/2 in sorting algorithms</title>
+      <link>https://satyamsundaram.com/2024/10/23/sorting-middle-pointer.html</link>
+      <guid>https://satyamsundaram.com/2024/10/23/sorting-middle-pointer.html</guid>
+      <pubDate>Wed, 23 Oct 2024 00:00:00 +0530</pubDate>
+      <description>In most sorting algorithms that use the divide and conquer approach, you’d need to find the middle index between two indices. If l is the left index and r is the right index, then our most obvious ...</description>
+    </item>
+    
+    <item>
+      <title>Reflections at 24</title>
+      <link>https://satyamsundaram.com/2024/10/19/reflections-at-24.html</link>
+      <guid>https://satyamsundaram.com/2024/10/19/reflections-at-24.html</guid>
+      <pubDate>Sat, 19 Oct 2024 00:00:00 +0530</pubDate>
+      <description>Embracing My Life In All Its Wreckage And All Its Glory | by Satyam Sundaram | Medium
+
+Embracing My Life In All Its Wreckage And All Its Glory
+
+[
+
+
+
+](/@satyamsundaram01?source=post_page—byline–c1d...</description>
+    </item>
+    
+    <item>
+      <title>Practices To Transform Life</title>
+      <link>https://satyamsundaram.com/2024/07/05/practices-to-transform-life.html</link>
+      <guid>https://satyamsundaram.com/2024/07/05/practices-to-transform-life.html</guid>
+      <pubDate>Fri, 05 Jul 2024 00:00:00 +0530</pubDate>
+      <description>
+
+layout: post
+title: “Practices To Transform Life”
+date: 2024-07-05
+
+All of us want to accomplish things in our life. We want to be respected in our work, be happy in our life and continue to grow...</description>
+    </item>
+    
+    <item>
+      <title>Framework for SaaS startups</title>
+      <link>https://satyamsundaram.com/2021/09/15/framework-saas-startups.html</link>
+      <guid>https://satyamsundaram.com/2021/09/15/framework-saas-startups.html</guid>
+      <pubDate>Wed, 15 Sep 2021 00:00:00 +0530</pubDate>
+      <description>The following is a framework for SaaS startups as explained by Bhavin Turakhia (serial entrepreneur, investor, billionaire) on a podcast with Sanjay Swamy where he discusses his four-point framewor...</description>
+    </item>
+    
+
+  </channel>
+</rss>

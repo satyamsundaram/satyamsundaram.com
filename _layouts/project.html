@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article>
+    <h1>{{ page.title }}</h1>
+    <p class="post-meta">
+        {{ page.year }}
+        {% if page.link %}
+        · <a href="{{ page.link }}">Visit project →</a>
+        {% endif %}
+    </p>
+
+    {{ content }}
+</article>

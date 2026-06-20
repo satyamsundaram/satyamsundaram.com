@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Why use left+(right-left)/2 instead of (left+right)/2 in sorting algorithms · Satyam Sundaram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+
+<body>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+  </button>
+
+  <header>
+    <h1 class="site-title">
+      <a href="/">Satyam Sundaram</a>
+    </h1>
+
+    <nav>
+      <a href="/blog">Blog</a>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/feed.xml">RSS</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+    <h1>Why use left+(right-left)/2 instead of (left+right)/2 in sorting algorithms</h1>
+    <p class="post-meta">
+        October 23, 2024
+    </p>
+
+    <p>In most sorting algorithms that use the divide and conquer approach, you’d need to find the middle index between two indices. If l is the left index and r is the right index, then our most obvious approach towards finding the half or middle of the two is <code class="language-plaintext highlighter-rouge">m = (l+r)/2</code>. But, this can create an integer overflow when both l &amp; r are large. Here’s why, you must use: <code class="language-plaintext highlighter-rouge">m = l + (r-l)/2</code>:</p>
+
+<p>Suppose you have l &amp; r as:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="n">INT_MAX</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="n">INT_MAX</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Using <code class="language-plaintext highlighter-rouge">int m = (l+r)/2</code> we would get:</p>
+
+<p><code class="language-plaintext highlighter-rouge">m = (INT_MAX + INT_MAX) / 2</code> in which <code class="language-plaintext highlighter-rouge">(INT_MAX + INT_MAX)</code> creates an integer overflow.</p>
+
+<p>Now, if we use <code class="language-plaintext highlighter-rouge">int m = l + (r-l)/2</code>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">m = INT_MAX + (INT_MAX - INT_MAX)/2</code> and, here we do not have an integer overflow.</p>
+
+<p>But, this process will not prevent integer overflow in cases when l &amp; r are large numbers of opposite signs, eg:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="n">INT_MAX</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="n">INT_MIN</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>In fact, it will create an integer overflow in this case whereas <code class="language-plaintext highlighter-rouge">(l+r)/2</code> will not.</p>
+
+<p>But, as long as we’re talking about sorting algorithms, l &amp; r are indices (0&lt;=l&lt;r), therefore they will both be positive. Thus, using <code class="language-plaintext highlighter-rouge">l+(r-l)/2</code> over <code class="language-plaintext highlighter-rouge">(l+r)/2</code> helps prevent integer overflow in sorting algorithms.</p>
+
+</article>
+
+  </main>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      btn.addEventListener('click', function () {
+        var root = document.documentElement;
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+
+        var rect = btn.getBoundingClientRect();
+        var x = rect.left + rect.width / 2;
+        var y = rect.top + rect.height / 2;
+        var r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+        root.style.setProperty('--vt-x', x + 'px');
+        root.style.setProperty('--vt-y', y + 'px');
+        root.style.setProperty('--vt-r', r + 'px');
+
+        var apply = function () {
+          root.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+        };
+
+        if (document.startViewTransition) {
+          document.startViewTransition(apply);
+        } else {
+          apply();
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>

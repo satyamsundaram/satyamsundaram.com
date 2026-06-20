@@ -27,6 +27,7 @@
 
 html {
     background: var(--bg);
+    overflow-x: hidden;
 }
 
 body {
@@ -34,6 +35,8 @@ body {
     padding: 0;
     background: var(--bg);
     color: var(--fg);
+    overflow-x: hidden;
+    max-width: 100%;
 
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 18px;
@@ -46,6 +49,13 @@ main {
     max-width: 720px;
     margin: 0 auto;
     padding: 20px;
+    min-width: 0;
+}
+
+main article {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -138,22 +148,35 @@ main code {
     border-radius: 3px;
     word-break: break-word;
     overflow-wrap: anywhere;
+    max-width: 100%;
 }
 
-main .highlighter-rouge,
-main .highlight {
+/* Outer wrapper only — pre also has class "highlight", so don't style .highlight directly */
+main .highlighter-rouge {
+    display: block;
+    width: 100%;
     max-width: 100%;
+    min-width: 0;
     border: 1px solid var(--code-border);
     border-radius: 6px;
     margin: 24px 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
-main .highlight pre {
+main .highlighter-rouge > .highlight {
+    margin: 0;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+main .highlighter-rouge pre {
     margin: 0;
     padding: 16px;
-    overflow-x: hidden;
-    white-space: pre-wrap;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: pre-wrap !important;
     word-break: break-word;
     overflow-wrap: anywhere;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -163,13 +186,21 @@ main .highlight pre {
     border: none;
 }
 
-main .highlight pre code {
+main .highlighter-rouge pre code {
+    display: block;
+    min-width: 0;
+    max-width: 100%;
     background: none;
     padding: 0;
     font-size: inherit;
     border-radius: 0;
-    white-space: pre-wrap;
+    white-space: pre-wrap !important;
     word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+main .highlighter-rouge pre code span {
+    white-space: pre-wrap !important;
     overflow-wrap: anywhere;
 }
 

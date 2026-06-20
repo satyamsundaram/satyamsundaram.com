@@ -27,7 +27,6 @@
 
 html {
     background: var(--bg);
-    overflow-x: hidden;
 }
 
 body {
@@ -35,8 +34,6 @@ body {
     padding: 0;
     background: var(--bg);
     color: var(--fg);
-    overflow-x: hidden;
-    max-width: 100%;
 
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 18px;
@@ -50,12 +47,6 @@ main {
     margin: 0 auto;
     padding: 20px;
     min-width: 0;
-}
-
-main article {
-    max-width: 100%;
-    min-width: 0;
-    overflow-x: hidden;
 }
 
 /* Header */
@@ -140,19 +131,32 @@ a:hover {
 }
 
 /* Code — layout only; token colors in assets/syntax.css (rougify) */
-main code {
+
+/* Inline `code` — Jekyll puts highlighter-rouge on inline <code>, not just block <div> */
+main p > code,
+main li > code,
+main td > code {
+    display: inline;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-size: 0.9em;
     background: var(--code-bg);
     padding: 0.1em 0.35em;
     border-radius: 3px;
-    word-break: break-word;
-    overflow-wrap: anywhere;
-    max-width: 100%;
 }
 
-/* Outer wrapper only — pre also has class "highlight", so don't style .highlight directly */
-main .highlighter-rouge {
+/* Reset block styles if inline code has highlighter-rouge class */
+main code.highlighter-rouge {
+    display: inline;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    border: none;
+    overflow: visible;
+    white-space: normal;
+}
+
+/* Fenced blocks: <div class="language-xxx highlighter-rouge"> */
+main div.highlighter-rouge {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -163,20 +167,20 @@ main .highlighter-rouge {
     overflow: hidden;
 }
 
-main .highlighter-rouge > .highlight {
+main div.highlighter-rouge > .highlight {
     margin: 0;
     max-width: 100%;
     min-width: 0;
     overflow: hidden;
 }
 
-main .highlighter-rouge pre {
+main div.highlighter-rouge pre {
     margin: 0;
     padding: 16px;
     min-width: 0;
     max-width: 100%;
     overflow: hidden;
-    white-space: pre-wrap !important;
+    white-space: pre-wrap;
     word-break: break-word;
     overflow-wrap: anywhere;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -186,7 +190,7 @@ main .highlighter-rouge pre {
     border: none;
 }
 
-main .highlighter-rouge pre code {
+main div.highlighter-rouge pre code {
     display: block;
     min-width: 0;
     max-width: 100%;
@@ -194,13 +198,13 @@ main .highlighter-rouge pre code {
     padding: 0;
     font-size: inherit;
     border-radius: 0;
-    white-space: pre-wrap !important;
+    white-space: pre-wrap;
     word-break: break-word;
     overflow-wrap: anywhere;
 }
 
-main .highlighter-rouge pre code span {
-    white-space: pre-wrap !important;
+main div.highlighter-rouge pre code span {
+    white-space: pre-wrap;
     overflow-wrap: anywhere;
 }
 

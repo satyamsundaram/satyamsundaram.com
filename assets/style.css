@@ -132,15 +132,27 @@ a:hover {
 
 /* Code — layout only; token colors in assets/syntax.css (rougify) */
 
-/* Inline `code` — not fenced blocks (those use div.highlighter-rouge) */
-main :not(pre) > code {
+/* Inline `code` — Jekyll puts highlighter-rouge on inline <code>, not just block <div> */
+main p > code,
+main li > code,
+main td > code {
+    display: inline;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-size: 0.9em;
     background: var(--code-bg);
     padding: 0.1em 0.35em;
     border-radius: 3px;
-    word-break: break-word;
-    overflow-wrap: anywhere;
+}
+
+/* Reset block styles if inline code has highlighter-rouge class */
+main code.highlighter-rouge {
+    display: inline;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    border: none;
+    overflow: visible;
+    white-space: normal;
 }
 
 /* Fenced blocks: <div class="language-xxx highlighter-rouge"> */

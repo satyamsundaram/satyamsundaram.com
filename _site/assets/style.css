@@ -10,6 +10,8 @@
     --meta: #666;
     --link: #0055cc;
     --border: #e2e2e2;
+    --code-bg: #f6f8fa;
+    --code-border: #d0d7de;
 }
 
 [data-theme="dark"] {
@@ -19,6 +21,8 @@
     --meta: #888;
     --link: #6ea8ff;
     --border: #2a2a2a;
+    --code-bg: #161b22;
+    --code-border: #30363d;
 }
 
 html {
@@ -123,6 +127,45 @@ a:hover {
 
 .socials a:hover {
     color: var(--fg);
+}
+
+/* Code — layout only; token colors in assets/syntax.css (rougify) */
+main code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9em;
+    background: var(--code-bg);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+main .highlight {
+    border: 1px solid var(--code-border);
+    border-radius: 6px;
+    margin: 24px 0;
+    overflow: hidden;
+}
+
+main .highlight pre {
+    margin: 0;
+    padding: 16px;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.85em;
+    line-height: 1.5;
+    background: transparent;
+    border: none;
+}
+
+main .highlight pre code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+    border-radius: 0;
 }
 
 /* Theme toggle */

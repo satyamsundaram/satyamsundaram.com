@@ -1,8 +1,8 @@
 ---
-
-## layout: post
+layout: post
 title: "Lessons learned that I want to take forward into the future"
 date: 2025-07-25
+---
 
 > All the lessons below intertwine and interconnect with each other, leading to the same goal: ***how to live a better life and be a better person***.
 

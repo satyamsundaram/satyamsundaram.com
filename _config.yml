@@ -3,6 +3,9 @@ description: Personal site & long-term knowledge base
 url: https://satyamsundaram.com
 
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
 # theme: minima
 
 collections:

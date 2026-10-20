@@ -6,8 +6,8 @@ title: About
 **About Me**
 
 Name: *Satyam Sundaram*  
-Current profession: *Site Reliability Engineer @ Moengage*  
-Previously: *Site Reliability Engineer @ Media.net*  
+Current profession: *Site Reliability Engineer @ Rubrik*  
+Previously: *Site Reliability Engineer @ Media.net & Moengage*  
 Location: *Bengaluru, India*  
 Interests: *computers, web, engineering, startups, philosophy, economy, history, culture, arts and life*
 
